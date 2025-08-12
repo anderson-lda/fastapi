@@ -5,3 +5,6 @@ usando sistema
 .\Scripts\Activate.ps1
 saindo
 deactivate
+
+instalações
+pip install fastapi psycopg2-binary sqlalchemy asyncpg uvicorn python-jose[cryptography] pytz passlib python-multipart
