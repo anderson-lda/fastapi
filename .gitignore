@@ -1,0 +1,35 @@
+# Ignora a pasta do ambiente virtual (ajuste o nome conforme necessário)
+venv/
+.env/
+.venv/
+
+Include/
+Lib/
+Scripts/
+
+# Ignora arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignora arquivos temporários do editor
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignora arquivos do VSCode
+.vscode/
+
+# Ignora arquivos de log e banco local
+*.log
+*.sqlite3
+
+# Ignora dist e builds
+build/
+dist/
+*.egg-info/
+
+# Ignora pyvenv.cfg caso esteja fora da pasta venv
+pyvenv.cfg
