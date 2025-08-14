@@ -1,7 +1,7 @@
 from typing import Optional
-from pydantic import Basemodel, HttpUrl
+from pydantic import BaseModel, HttpUrl
 
-class ArtigoSchema(Basemodel):
+class ArtigoSchema(BaseModel):
     id: Optional[int] = None
     titulo: str
     descricao: str

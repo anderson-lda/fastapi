@@ -1,8 +1,8 @@
 from typing import Optional, List
-from pydantic import Basemodel, EmailStr
+from pydantic import BaseModel, EmailStr
 from schemas.artigo_schema import ArtigoSchema
 
-class UsuarioSchemaBase(Basemodel):
+class UsuarioSchemaBase(BaseModel):
     id: Optional[int] = None
     nome: str
     sobrenome: str

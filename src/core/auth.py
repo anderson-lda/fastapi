@@ -1,7 +1,7 @@
 from pytz import timezone
 from typing import Optional, List
 from datetime import datetime, timedelta
-from fastapi.security import OAuth2Passwordbearer
+from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from jose import jwt
@@ -10,7 +10,7 @@ from core.configs import settings
 from core.security import verificar_senha
 from pydantic import EmailStr
 
-oauth2_schema = OAuth2Passwordbearer(
+oauth2_schema = OAuth2PasswordBearer(
     tokenUrl=f"{settings.API_V1_STR}/usuarios/login"
 )
 

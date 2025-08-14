@@ -1,7 +1,7 @@
 from typing import List, Optional, Any
 from fastapi import APIRouter, status, Depends, HTTPException, Response
 from fastapi.security import OAuth2PasswordRequestForm
-from fastapi.response import JSONResponse
+from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from models.usuario_model import UsuarioModel
@@ -54,7 +54,7 @@ async def get_usuario(usuario_id: int, db: AsyncSession = Depends(get_session)):
             raise HTTPException(detail='usuário não encontrado', status_code=status.HTTP_404_NOT_FOUND)
 
 #PUT usuário
-@router.put('/{usuario_id}', response_model=UsuarioSchemaBase, status_code=status.HTTP_202_ACCEPT)
+@router.put('/{usuario_id}', response_model=UsuarioSchemaBase, status_code=status.HTTP_202_ACCEPTED)
 async def put_usuario(usuario_id: int, usuario: UsuarioSchemaUp, db: AsyncSession = Depends(get_session)):
     async with db as session:
         query = select(UsuarioModel).filter(UsuarioModel.id == usuario_id)

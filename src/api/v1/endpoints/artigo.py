@@ -45,7 +45,7 @@ async def get_artigo(artigo_id: int, db: AsyncSession = Depends(get_session)):
             raise HTTPException(detail='artigo não encontrado', status_code=status.HTTP_404_NOT_FOUND)
         
 #PUT artigo
-@router.put('/{artigo_id}', response_model=ArtigoSchema, status_code=status.HTTP_202_ACCEPT)
+@router.put('/{artigo_id}', response_model=ArtigoSchema, status_code=status.HTTP_202_ACCEPTED)
 async def put_artigo(
     artigo_id: int, 
     artigo: ArtigoSchema, 
